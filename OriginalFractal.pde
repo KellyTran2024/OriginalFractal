@@ -9,7 +9,8 @@ void draw() {
   pistil(width / 2, height / 2, 12, 3, 6); 
 }
 
-void Fractal(float x, float y, float size, int numCircles) {
+
+void myFractal(float x, float y, float size, int numCircles) {
   if (size < 8) return; 
 
   fill(200, 0, 0, 100);
@@ -18,8 +19,9 @@ void Fractal(float x, float y, float size, int numCircles) {
     ellipse(x + cos(angle) * size * 0.7, y + sin(angle) * size * 0.7, size, size);
   }
 
-  Fractal(x, y, size * 0.75, numCircles);
+  myFractal(x, y, size * 0.75, numCircles);
 }
+
 void pistil(float x, float y, float size, int depth, int numTriangles) {
   if (depth <= 0 || size < 3) return;
 
